@@ -4,6 +4,6 @@ export interface Game {
   poster: string;
   title: string;
   desc: string;
-  raiting?: number;
-  prise: number;
+  rating?: number;
+  price: number;
 }
