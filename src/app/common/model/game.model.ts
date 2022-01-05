@@ -1,4 +1,4 @@
-export interface Game {
+export interface GameMadel {
   id: number;
   type: string;
   poster: string;
