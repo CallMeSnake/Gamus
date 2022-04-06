@@ -3,6 +3,7 @@ module.exports = {
   USER: 'gamusdb',
   PASSWORD: '123456789',
   DB: 'gamusdb',
+  dialect: 'mysql',
   pool: {
     max: 5,
     min: 0,
