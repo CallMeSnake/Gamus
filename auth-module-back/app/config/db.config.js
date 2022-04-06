@@ -1,9 +1,8 @@
 module.exports = {
-  HOST: "sql11.freemysqlhosting.net",
-  USER: "sql11479772",
-  PASSWORD: "hIFpVlstwZ",
-  DB: "sql11479772",
-  dialect: "mysql",
+  HOST: 'db4free.net',
+  USER: 'gamusdb',
+  PASSWORD: '123456789',
+  DB: 'gamusdb',
   pool: {
     max: 5,
     min: 0,
