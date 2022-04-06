@@ -1,4 +1,3 @@
-import { registerLocaleData } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { select, Store } from '@ngrx/store';
@@ -30,14 +29,25 @@ export class RegisterComponent implements OnInit {
 
   initializeForm(): void {
     this.form = this.fb.group({
-      username: '',
-      email: '',
-      password: '',
+      username: ['', [Validators.required, Validators.minLength(4)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
     });
+  }
+
+  get username() {
+    return this.form.get('username');
+  }
+  get email() {
+    return this.form.get('email');
+  }
+  get password() {
+    return this.form.get('password');
   }
 
   onSubmit(): void {
     console.log(this.form.value);
+
     this.store.dispatch(registerAction(this.form.value));
     this.authService.register(this.form.value).subscribe((currentUser: CurrentUserInterface) => {
       console.log('currentUser', currentUser);
