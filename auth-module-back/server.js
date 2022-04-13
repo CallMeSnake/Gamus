@@ -1,8 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-var bodyParser = require('body-parser');
 
+var bodyParser = require('body-parser');
 const app = express();
+
+const jsonParser = express.json();
+
+app.use(jsonParser);
 
 var corsOptions = {
   origin: 'http://localhost:4200',
@@ -11,8 +15,10 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true }));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const db = require('./app/models');
 const Role = db.role;
@@ -25,9 +31,6 @@ app.get('/', (req, res) => {
 
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

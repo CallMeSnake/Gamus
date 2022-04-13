@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { RegisterComponent } from './components/register/register.component';
-import { AuthService } from './services/auth..service';
+import { AuthService } from './services/auth.service';
+import { RegisterEffect } from './store/effects/register.effects';
 import { reducer } from './store/reducers';
 
 const routes: Routes = [
@@ -22,6 +24,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     StoreModule.forFeature('auth', reducer),
+    EffectsModule.forFeature([RegisterEffect]),
   ],
   declarations: [RegisterComponent],
   providers: [AuthService],
