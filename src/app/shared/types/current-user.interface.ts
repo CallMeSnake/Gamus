@@ -6,5 +6,5 @@ export interface CurrentUser {
   username: string;
   bio: string | null;
   image: string | null;
-  token: string;
+  token: string | null;
 }

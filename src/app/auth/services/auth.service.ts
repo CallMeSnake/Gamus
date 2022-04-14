@@ -12,6 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
   register(data: RegisterRequest): Observable<CurrentUser> {
     const url = environment.apiUrl + '/auth/signup';
-    return this.http.post<AuthResponse>(url, data).pipe(map((response: AuthResponse) => response.user));
+    // return this.http.post<AuthResponse>(url, data).pipe(map((response: AuthResponse) => response.user));
+    return this.http.post<CurrentUser>(url, data);
   }
 }

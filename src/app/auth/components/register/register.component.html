@@ -42,9 +42,10 @@
           <div class="cut cut-short"></div>
           <label for="password" class="placeholder">Password</label>
         </div>
-        <button type="submit" class="submit" [disabled]="isSubmitting$ | async">Sign Up</button>
+        <button type="submit" class="submit" [disabled]="isSubmitting$ | async" [disabled]="!formdata.valid">
+          Sign Up
+        </button>
       </form>
     </div>
   </div>
 </body>
-<!-- [disabled]="!formdata.valid" -->
