@@ -14,6 +14,10 @@
         <div class="title">Welcome</div>
         <div class="subtitle">Let's create your account!</div>
         <a [routerLink]="['/login']" class="subtitle">Have an account?</a>
+        <gamus-backend-error-messages
+          *ngIf="backendErrors$ | async"
+          [backendErrors]="backendErrors$ | async"
+        ></gamus-backend-error-messages>
         <div class="input-container ic1">
           <input id="username" class="input" type="text" placeholder=" " formControlName="username" required />
           <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
