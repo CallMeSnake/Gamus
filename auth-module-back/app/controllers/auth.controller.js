@@ -28,8 +28,11 @@ exports.signup = (req, res) => {
           });
         });
       } else {
+        var token = jwt.sign({ id: user.id }, config.secret, {
+          expiresIn: 86400,
+        });
         user.setRoles([1]).then(() => {
-          res.send({ user: user });
+          res.send({ user: user, accessToken: token });
         });
       }
     })
