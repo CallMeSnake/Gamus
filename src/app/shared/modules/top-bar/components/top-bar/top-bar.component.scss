@@ -1,0 +1,46 @@
+nav {
+  background-color: #2B2C3A;
+  height: 72px;
+  width: 80%;
+  float: right;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  border-bottom: solid;
+  border-bottom-color: #D8D8D8;
+}
+
+.link {
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  opacity: 0.6;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.link:hover {
+  color: #FFFFFF;
+  opacity: 1;
+  background-color: transparent;
+  text-decoration: underline;
+  text-decoration: none;
+}
+
+.wallet {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #FFFFFF;
+  background-color: #3b3c4a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.25em;
+  border-radius: 5px;
+  padding-right: 0.5em;
+  padding-left: 0.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}

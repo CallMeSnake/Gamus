@@ -1,0 +1,20 @@
+<nav>
+  <div>
+    <a href="http://localhost:4200/" class="link">FAQ</a>
+    <a href="http://localhost:4200/" class="link">About</a>
+    <a href="http://localhost:4200/" class="link">Support</a>
+  </div>
+  <ng-container *ngIf="isLoggedIn$ | async">
+    <div>
+      <div class="wallet">
+        <img src="../../../../../../assets/images/interface/dollar-symbol.png" style="width: 18px" />
+        <div>{{ money }}</div>
+      </div>
+      <a href="http://localhost:4200/" class="link">{{ (currentUser$ | async).user.username }}</a>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="isAnonymous$ | async">
+    <button type="button">Sign Up</button>
+    <button>Sign In</button>
+  </ng-container>
+</nav>
