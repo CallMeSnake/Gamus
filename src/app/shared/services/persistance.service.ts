@@ -6,7 +6,7 @@ export class PersistanceService {
     try {
       localStorage.setItem(key, JSON.stringify(data));
     } catch (error) {
-      console.error('Error saving to lokalStorage', error);
+      console.error('Error saving to localStorage', error);
     }
   }
   get(key: string): any {
