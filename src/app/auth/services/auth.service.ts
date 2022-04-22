@@ -18,4 +18,10 @@ export class AuthService {
     const url = environment.apiUrl + '/auth/signin';
     return this.http.post<CurrentUser>(url, data);
   }
+  getCurrentUser(): Observable<CurrentUser> {
+    const url = environment.apiUrl + '/test/user';
+    return this.http.get<CurrentUser>(url);
+
+    // return this.http.get<CurrentUser>(url);
+  }
 }

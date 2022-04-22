@@ -10,7 +10,7 @@
 <body>
   <div style="display: flex; justify-content: center">
     <div class="form">
-      <form [formGroup]="form" (ngSubmit)="onSubmit()" #formdata="ngForm" autocomplete="off">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" #formdata="ngForm" autocomplete="on">
         <div class="title">Welcome</div>
         <div class="subtitle">Enter your account data</div>
         <a [routerLink]="['/register']" class="subtitle">Need an account?</a>
