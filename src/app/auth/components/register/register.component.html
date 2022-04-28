@@ -18,7 +18,7 @@
           *ngIf="backendErrors$ | async"
           [backendErrors]="backendErrors$ | async"
         ></gamus-backend-error-messages>
-        <div class="input-container ic1">
+        <div *ngIf="username" class="input-container ic1">
           <input id="username" class="input" type="text" placeholder=" " formControlName="username" required />
           <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
             <div *ngIf="username.errors?.['required']" class="error-message">Username is required.</div>
@@ -27,7 +27,7 @@
           <div class="cut"></div>
           <label for="username" class="placeholder">Username</label>
         </div>
-        <div class="input-container ic2">
+        <div *ngIf="email" class="input-container ic2">
           <input id="email" class="input" type="email" placeholder=" " formControlName="email" required />
           <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
             <div *ngIf="email.errors?.['required']" class="error-message">Email is required.</div>
@@ -37,7 +37,7 @@
           <div class="cut"></div>
           <label for="email" class="placeholder">Email</label>
         </div>
-        <div class="input-container ic2">
+        <div *ngIf="password" class="input-container ic2">
           <input id="password" class="input" type="password" placeholder=" " formControlName="password" />
           <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
             <div *ngIf="password.errors?.['required']" class="error-message">Password is required.</div>
