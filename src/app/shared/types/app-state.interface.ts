@@ -1,4 +1,4 @@
-import { AUTH_STATE_SELECTOR } from '../../auth/store/selectors';
+import { AUTH_STATE_SELECTOR } from '../../auth/store/auth.selectors';
 import { AuthState } from '../../auth/types/auth-state.interface';
 
 export interface AppState {

@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { AppState } from 'src/app/shared/types/app-state.interface';
-import { BackendErrors } from 'src/app/shared/types/backend-errors.interface';
+
+import { AppState } from '../../../shared/types/app-state.interface';
+import { BackendError } from '../../../shared/types/backend-error.interface';
 import { registerAction } from '../../store/actions/register.actions';
-import { isSubmittingSelector, validationErrorsSelector } from '../../store/selectors';
+import { isSubmittingSelector, validationErrorsSelector } from '../../store/auth.selectors';
 
 @Component({
   selector: 'gamus-register',
@@ -19,7 +20,7 @@ export class RegisterComponent {
     password: ['', [Validators.required, Validators.minLength(8)]],
   });
   isSubmitting$: Observable<boolean> = this.store.pipe(select(isSubmittingSelector));
-  backendErrors$: Observable<BackendErrors | null> = this.store.pipe(select(validationErrorsSelector));
+  backendErrors$: Observable<BackendError | null> = this.store.pipe(select(validationErrorsSelector));
 
   constructor(private fb: FormBuilder, private store: Store<AppState>) {}
 

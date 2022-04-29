@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { BackendErrors } from 'src/app/shared/types/backend-errors.interface';
+
+import { BackendError } from '../../../../types/backend-error.interface';
 
 @Component({
   selector: 'gamus-backend-error-messages',
@@ -7,7 +8,7 @@ import { BackendErrors } from 'src/app/shared/types/backend-errors.interface';
   styleUrls: ['./backend-error-messages.component.scss'],
 })
 export class BackendErrorMessagesComponent {
-  @Input('backendErrors') set backendErrors(backendErrors: BackendErrors | null) {
+  @Input('backendErrors') set backendErrors(backendErrors: BackendError | null) {
     if (!backendErrors) {
       this.errorMessages = [];
       return;

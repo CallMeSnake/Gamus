@@ -1,11 +1,12 @@
 import { Action, createReducer, on } from '@ngrx/store';
+
 import { AuthState } from '../types/auth-state.interface';
 import { registerAction, registerFailureAction, registerSuccessAction } from './actions/register.actions';
 
 const initialState: AuthState = {
   isSubmitting: false,
   currentUser: null,
-  isLoggedIn: null,
+  isLoggedIn: false,
   validationErrors: null,
 };
 

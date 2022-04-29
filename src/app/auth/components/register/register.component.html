@@ -1,14 +1,5 @@
-<!-- <a [routerLink]="['/login']">Have an account?</a> Backend errors here
-<form>
-  <fieldset>
-    <fieldset><input type="text" placeholder="Username" /></fieldset>
-    <fieldset><input type="text" placeholder="Email" /></fieldset>
-    <fieldset><input type="password" placeholder="Password" /></fieldset>
-    <button type="submit">Sign Up</button>
-  </fieldset>
-</form> -->
 <body>
-  <div style="display: flex; justify-content: center">
+  <div class="form-container">
     <div class="form">
       <form [formGroup]="form" (ngSubmit)="onSubmit()" #formdata="ngForm" autocomplete="off">
         <div class="title">Welcome</div>
