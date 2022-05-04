@@ -6,8 +6,8 @@
         <div class="subtitle">Let's create your account!</div>
         <a [routerLink]="['/login']" class="subtitle">Have an account?</a>
         <gamus-backend-error-messages
-          *ngIf="backendErrors$ | async"
-          [backendErrors]="backendErrors$ | async"
+          *ngIf="backendError$ | async"
+          [backendError]="backendError$ | async"
         ></gamus-backend-error-messages>
         <div *ngIf="username" class="input-container ic1">
           <input id="username" class="input" type="text" placeholder=" " formControlName="username" required />

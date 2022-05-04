@@ -20,7 +20,7 @@ export class RegisterComponent {
     password: ['', [Validators.required, Validators.minLength(8)]],
   });
   isSubmitting$: Observable<boolean> = this.store.pipe(select(isSubmittingSelector));
-  backendErrors$: Observable<BackendError | null> = this.store.pipe(select(validationErrorsSelector));
+  backendError$: Observable<BackendError | undefined> = this.store.pipe(select(validationErrorsSelector));
 
   constructor(private fb: FormBuilder, private store: Store<AppState>) {}
 

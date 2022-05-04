@@ -8,12 +8,12 @@ import { BackendError } from '../../../../types/backend-error.interface';
   styleUrls: ['./backend-error-messages.component.scss'],
 })
 export class BackendErrorMessagesComponent {
-  @Input('backendErrors') set backendErrors(backendErrors: BackendError | null) {
-    if (!backendErrors) {
+  @Input('backendError') set backendError(backendError: BackendError | null | undefined) {
+    if (!backendError) {
       this.errorMessages = [];
       return;
     }
-    this.errorMessages = Object.keys(backendErrors).map(() => `${backendErrors.message}`);
+    this.errorMessages = Object.keys(backendError).map(() => `${backendError.message}`);
   }
 
   errorMessages: string[] = [];
