@@ -4,7 +4,7 @@ export interface CurrentUser {
   createdAt: string;
   updatedAt: string;
   username: string;
-  bio?: string | null;
-  image?: string | null;
+  bio?: string;
+  image?: string;
   accessToken: string | null;
 }
