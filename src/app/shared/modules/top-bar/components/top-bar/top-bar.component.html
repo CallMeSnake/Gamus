@@ -10,7 +10,7 @@
         <img src="../../../../../../assets/images/interface/dollar-symbol.png" style="width: 18px" />
         <div>{{ money }}</div>
       </div>
-      <a href="http://localhost:4200/" class="link">{{ (currentUser$ | async).user.username }}</a>
+      <a href="http://localhost:4200/" class="link">{{ (currentUser$ | async).username }}</a>
     </div>
   </ng-container>
   <ng-container *ngIf="isAnonymous$ | async">
