@@ -1,4 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+
 import { AuthState } from '../types/auth-state.interface';
 
 export const AUTH_STATE_SELECTOR = 'auth';
@@ -18,3 +19,7 @@ export const isAnonymousSelector = createSelector(
   (authState: AuthState) => authState.isLoggedIn === false
 );
 export const currentUserSelector = createSelector(authFeatureSelector, (authState: AuthState) => authState.currentUser);
+export const usernameSelector = createSelector(
+  authFeatureSelector,
+  (authState: AuthState) => authState.currentUser?.user.username
+);

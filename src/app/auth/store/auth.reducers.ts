@@ -1,6 +1,6 @@
 import { Action, createReducer, on } from '@ngrx/store';
-
 import { AuthState } from '../types/auth-state.interface';
+
 import {
   getCurrentUserAction,
   getCurrentUserFailureAction,
