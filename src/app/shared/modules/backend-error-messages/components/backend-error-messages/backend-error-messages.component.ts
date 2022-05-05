@@ -1,20 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { BackendErrors } from 'src/app/shared/types/backend-errors.interface';
+import { Component, Input } from '@angular/core';
+
+import { BackendError } from '../../../../types/backend-error.interface';
 
 @Component({
   selector: 'gamus-backend-error-messages',
   templateUrl: './backend-error-messages.component.html',
   styleUrls: ['./backend-error-messages.component.scss'],
 })
-export class BackendErrorMessagesComponent implements OnInit {
-  @Input('backendErrors') backendErrorsProps: BackendErrors;
-
-  errorMessages: string[];
-
-  ngOnInit(): void {
-    this.errorMessages = Object.keys(this.backendErrorsProps).map((name: string) => {
-      const messages = this.backendErrorsProps.message;
-      return `${messages}`;
-    });
+export class BackendErrorMessagesComponent {
+  @Input('backendError') set backendError(backendError: BackendError | null | undefined) {
+    if (!backendError) {
+      this.errorMessages = [];
+      return;
+    }
+    this.errorMessages = Object.keys(backendError).map(() => `${backendError.message}`);
   }
+
+  errorMessages: string[] = [];
 }

@@ -1,10 +1,11 @@
-import { BackendErrors } from 'src/app/shared/types/backend-errors.interface';
-import { CurrentUser } from 'src/app/shared/types/current-user.interface';
+import { BackendError } from '../../shared/types/backend-error.interface';
+import { CurrentUser } from '../../shared/types/current-user.interface';
 
 export interface AuthState {
   isSubmitting: boolean;
+
   isLoading: boolean;
-  currentUser: CurrentUser | null;
-  isLoggedIn: boolean | null;
-  validationErrors: BackendErrors | null;
+  currentUser?: CurrentUser;
+  isLoggedIn: boolean;
+  validationErrors?: BackendError;
 }

@@ -1,40 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { BackendErrors } from 'src/app/shared/types/backend-errors.interface';
+
+import { AppState } from '../../../shared/types/app-state.interface';
+import { BackendError } from '../../../shared/types/backend-error.interface';
 import { registerAction } from '../../store/actions/register.actions';
-import { isSubmittingSelector, validationErrorsSelector } from '../../store/selectors';
+import { isSubmittingSelector, validationErrorsSelector } from '../../store/auth.selectors';
 
 @Component({
   selector: 'gamus-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
-export class RegisterComponent implements OnInit {
-  form: FormGroup;
-  isSubmitting$: Observable<boolean>;
-  backendErrors$: Observable<BackendErrors | null>;
+export class RegisterComponent {
+  form: FormGroup = this.fb.group({
+    username: ['', [Validators.required, Validators.minLength(4)]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
+  });
+  isSubmitting$: Observable<boolean> = this.store.pipe(select(isSubmittingSelector));
+  backendError$: Observable<BackendError | undefined> = this.store.pipe(select(validationErrorsSelector));
 
-  constructor(private fb: FormBuilder, private store: Store) {}
-
-  ngOnInit(): void {
-    this.initializeForm();
-    this.initializeValues();
-  }
-
-  initializeValues(): void {
-    this.isSubmitting$ = this.store.pipe(select(isSubmittingSelector));
-    this.backendErrors$ = this.store.pipe(select(validationErrorsSelector));
-  }
-
-  initializeForm(): void {
-    this.form = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(4)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-    });
-  }
+  constructor(private fb: FormBuilder, private store: Store<AppState>) {}
 
   get username() {
     return this.form.get('username');

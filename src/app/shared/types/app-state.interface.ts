@@ -1,5 +1,6 @@
-import { AuthState } from 'src/app/auth/types/auth-state.interface';
+import { AUTH_STATE_SELECTOR } from '../../auth/store/auth.selectors';
+import { AuthState } from '../../auth/types/auth-state.interface';
 
 export interface AppState {
-  auth: AuthState;
+  [AUTH_STATE_SELECTOR]: AuthState;
 }

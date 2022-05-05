@@ -2,6 +2,11 @@ input.ng-invalid.ng-touched {
   border: 1px solid red; 
 }
 
+.form-container {
+  display: flex; 
+  justify-content: center;
+}
+
 .error-message {
   color:#ff4738;
   font-family: sans-serif;
