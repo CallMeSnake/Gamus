@@ -1,5 +1,5 @@
 nav {
-  background-color: #2B2C3A;
+  background-color: #2b2c3a;
   height: 72px;
   width: 70%;
   float: right;
@@ -9,12 +9,12 @@ nav {
   padding-right: 5%;
   justify-content: space-between;
   border-bottom: solid;
-  border-bottom-color: #D8D8D8;
+  border-bottom-color: #3c3c4a;
 }
 
 .text {
   font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
   padding-left: 1em;
   padding-right: 1em;
@@ -22,7 +22,7 @@ nav {
 
 .link {
   font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.6;
   font-size: 14px;
   text-decoration: none;
@@ -31,7 +31,7 @@ nav {
 }
 
 .link:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
   background-color: transparent;
   text-decoration: underline;
@@ -42,7 +42,7 @@ nav {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #3b3c4a;
   display: flex;
   align-items: center;
@@ -56,12 +56,11 @@ nav {
 }
 
 .sign-button {
-    background-color: #6F6EFF;
-    color: white;
-    display: flex;
-    align-items: center;
+  background-color: #6f6eff;
+  color: white;
+  display: flex;
+  align-items: center;
 }
-
 
 .logout {
   background-color: #8f2117;
@@ -72,7 +71,7 @@ nav {
 }
 
 .logout:hover {
-  background-color: #FF4738;
+  background-color: #ff4738;
 }
 
 .right-part-user {
