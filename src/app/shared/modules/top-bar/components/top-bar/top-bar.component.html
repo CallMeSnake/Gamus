@@ -5,17 +5,19 @@
     <a href="http://localhost:4200/" class="link">Support</a>
   </div>
   <ng-container *ngIf="isLoggedIn$ | async">
-    <div>
+    <div class="right-part-user">
       <div class="wallet">
         <img src="../../../../../../assets/images/interface/dollar-symbol.png" style="width: 18px" />
         <div>{{ money }}</div>
       </div>
-      <a href="http://localhost:4200/" class="link">{{ username$ | async }}</a>
-      <button mat-button (click)="onLogout()">Logout</button>
+      <div class="text">Hello, {{ username$ | async }}!</div>
+      <button mat-button class="logout" (click)="onLogout()">Logout</button>
     </div>
   </ng-container>
   <ng-container *ngIf="isAnonymous$ | async">
-    <button type="button">Sign Up</button>
-    <a href="http://localhost:4200/login">Sign In</a>
+    <div class="right-part-public">
+      <a mat-button class="sign-button text" href="http://localhost:4200/register">Sign Up</a>
+      <a mat-button class="sign-button text" href="http://localhost:4200/login">Sign In</a>
+    </div>
   </ng-container>
 </nav>

@@ -1,13 +1,23 @@
 nav {
   background-color: #2B2C3A;
   height: 72px;
-  width: 80%;
+  width: 70%;
   float: right;
   display: flex;
   align-items: center;
   padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-between;
   border-bottom: solid;
   border-bottom-color: #D8D8D8;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .link {
@@ -40,7 +50,39 @@ nav {
   width: 3.25em;
   border-radius: 5px;
   padding-right: 0.5em;
-  padding-left: 0.2em;
+  padding-left: 0.5em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
+}
+
+.sign-button {
+    background-color: #6F6EFF;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.logout {
+  background-color: #8f2117;
+  color: white;
+  height: 1.8em;
+  display: flex;
+  align-items: center;
+}
+
+.logout:hover {
+  background-color: #FF4738;
+}
+
+.right-part-user {
+  display: flex;
+  align-items: center;
+}
+
+.right-part-public {
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
