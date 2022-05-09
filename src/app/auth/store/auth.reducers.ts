@@ -6,7 +6,7 @@ import {
   getCurrentUserFailureAction,
   getCurrentUserSuccessAction,
 } from './actions/get-current-user.action';
-import { loginAction, loginFailureAction, loginSuccessAction } from './actions/login-actions';
+import { loginAction, loginFailureAction, loginSuccessAction, logoutAction } from './actions/login-actions';
 import { registerAction, registerFailureAction, registerSuccessAction } from './actions/register.actions';
 
 const initialState: AuthState = {
@@ -52,6 +52,8 @@ const authReducer = createReducer(
     loginFailureAction,
     (state, action): AuthState => ({ ...state, isSubmitting: false, validationErrors: action.errors })
   ),
+
+  on(logoutAction, (): AuthState => ({ ...initialState })),
 
   on(getCurrentUserAction, (state): AuthState => ({ ...state, isLoading: true })),
   on(

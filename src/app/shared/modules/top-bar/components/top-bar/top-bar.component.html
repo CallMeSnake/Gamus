@@ -11,6 +11,7 @@
         <div>{{ money }}</div>
       </div>
       <a href="http://localhost:4200/" class="link">{{ username$ | async }}</a>
+      <button mat-button (click)="onLogout()">Logout</button>
     </div>
   </ng-container>
   <ng-container *ngIf="isAnonymous$ | async">

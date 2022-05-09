@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 
 import { AuthService } from '../../services/auth.service';
-import { loginAction, loginFailureAction, loginSuccessAction } from '../actions/login-actions';
+import { loginAction, loginFailureAction, loginSuccessAction, logoutAction } from '../actions/login-actions';
 import { CurrentUser } from '../../../shared/types/current-user.interface';
 import { PersistanceService } from '../../../shared/services/persistance.service';
 
@@ -27,6 +27,17 @@ export class LoginEffect {
         );
       })
     )
+  );
+
+  logout$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(logoutAction),
+        tap(() => {
+          this.persistanceService.set('accessToken');
+        })
+      ),
+    { dispatch: false }
   );
 
   redirectAfterSubmit$ = createEffect(

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { logoutAction } from '../../../../../auth/store/actions/login-actions';
 
 import {
   currentUserSelector,
@@ -23,13 +24,17 @@ export class TopBarComponent implements OnInit {
 
   money: number = 0;
 
+  get random() {
+    return Math.floor(Math.random() * 100) + 1;
+  }
+
   constructor(private store: Store) {}
 
   ngOnInit(): void {
     this.money = this.random;
   }
 
-  get random() {
-    return Math.floor(Math.random() * 100) + 1;
+  onLogout() {
+    this.store.dispatch(logoutAction());
   }
 }
