@@ -7,6 +7,10 @@ nav {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo {
   height: 72px;
   border-bottom: solid;
@@ -24,11 +28,12 @@ nav {
 
 .content-padding {
   padding-left: 10%;
-  padding-right: 10%;
+  // padding-right: 10%;
 }
 
 .space-between {
-  padding: 0.5em 0;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
 }
 
 .logo-padding {
@@ -50,22 +55,22 @@ nav {
   flex-direction: row;
   align-items: center;
   padding: 0;
-  padding-right: 1em;
-  border-radius: inherit;
+  padding-right: 10%;
+  border-radius: 0%;
   transition: height 225ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mat-expansion-panel-body {
-  padding: 0;
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 0;
 }
 
 .icon {
   font-size: 18px;
   color: #9899a1;
-  :hover {
-    color: #6f6eff;
-    cursor: pointer;
-  }
+  padding-left: 0.5em;
 }
 
 .inline-content {
@@ -75,12 +80,51 @@ nav {
 
 .inline-text {
   color: #9899a1;
-  :hover {
-    color: #ffffff;
-    cursor: pointer;
-  }
+  padding: 1em;
+}
+
+.menu-text {
+  color: #ffffff;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .inline-space {
   padding-left: 1em;
+}
+
+.menu {
+  :not(.nohover):hover {
+    background-color: #3c3c4a;
+    border-left: solid;
+    border-left-color: #6f6eff;
+    transition: 0.2s;
+  }
+}
+
+.button {
+  :hover > .inline-text {
+    color: #ffffff;
+  }
+  :hover > .icon {
+    color: #6f6eff;
+  }
+}
+
+.last-module {
+  border-top: solid;
+  border-top-color: #3c3c4a;
+  border-bottom: solid;
+  border-bottom-color: #3c3c4a;
+}
+
+.last-icon {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.last-text {
+  padding-left: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }

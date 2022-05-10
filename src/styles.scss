@@ -3,3 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
+.mat-expansion-panel-content > .mat-expansion-panel-body {
+  padding: 0 !important;
+}

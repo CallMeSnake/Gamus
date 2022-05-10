@@ -1,83 +1,89 @@
 <nav>
-  <div class="logo content-padding">
+  <a href="http://localhost:4200/" class="logo content-padding">
     <img src="../../../../../../assets/images/interface/logo.png" alt="logo" />
     <div class="text logo-padding">GAMUS</div>
     <div class="text alfa-logo">alfa</div>
-  </div>
-  <div class="text content-padding">
+  </a>
+  <div class="text">
     <mat-accordion multi [displayMode]="mode">
-      <mat-expansion-panel>
+      <mat-expansion-panel class="menu">
         <mat-expansion-panel-header>
-          <mat-panel-title class="space-between">
-            <div>GAMES</div>
+          <mat-panel-title class="space-between nohover">
+            <div class="content-padding nohover">GAMES</div>
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <div>
-          <div class="space-between">All Games</div>
-          <div class="space-between">My favourite Games</div>
-        </div>
-      </mat-expansion-panel>
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title class="space-between">
-            <div>Categories</div>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="inline-text">
-          <div class="space-between">
-            <div class="inline-content">
-              <span class="icon">
-                <i class="fas fa-fighter-jet"></i>
-              </span>
-              <p class="inline-space inline-text">Action</p>
-            </div>
+        <div class="nohover">
+          <a href="http://localhost:4200/"><p class="menu-text content-padding">All Games</p></a>
+          <div class="nohover">
+            <mat-expansion-panel class="nohover">
+              <mat-expansion-panel-header class="menu">
+                <mat-panel-title class="space-between content-padding nohover">
+                  <div class="nohover">Categories</div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <a href="http://localhost:4200/" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-fighter-jet nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Action</p>
+                </div>
+              </a>
+              <a href="http://localhost:4200/" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-rocket nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Adventure</p>
+                </div>
+              </a>
+              <a href="http://localhost:4200/" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-puzzle-piece nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Casual</p>
+                </div>
+              </a>
+              <a href="http://localhost:4200/" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-chess nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Strategy</p>
+                </div>
+              </a>
+              <a href="http://localhost:4200/" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-brain nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Intellectual</p>
+                </div>
+              </a>
+              <a href="http://localhost:4200/" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-volleyball-ball nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Sport</p>
+                </div>
+              </a>
+            </mat-expansion-panel>
           </div>
-          <div class="space-between">
-            <div class="inline-content">
-              <span class="icon">
-                <i class="fas fa-rocket"></i>
-              </span>
-              <p class="inline-space inline-text">Adventure</p>
-            </div>
-          </div>
-          <div class="space-between">
-            <div class="inline-content">
-              <span class="icon">
-                <i class="fas fa-puzzle-piece"></i>
-              </span>
-              <p class="inline-space inline-text">Casual</p>
-            </div>
-          </div>
-          <div class="space-between">
-            <div class="inline-content">
-              <span class="icon">
-                <i class="fas fa-chess"></i>
-              </span>
-              <p class="inline-space inline-text">Strategy</p>
-            </div>
-          </div>
-          <div class="space-between">
-            <div class="inline-content">
-              <span class="icon">
-                <i class="fas fa-brain"></i>
-              </span>
-              <p class="inline-space inline-text">Intellectual</p>
-            </div>
-          </div>
-          <div class="space-between">
-            <div class="inline-content">
-              <span class="icon">
-                <i class="fas fa-volleyball-ball"></i>
-              </span>
-              <p class="inline-space inline-text">Sport</p>
-            </div>
-          </div>
+          <a href="http://localhost:4200/"><p class="menu-text content-padding">Recommended</p></a>
+          <a href="http://localhost:4200/" class="space-between"><p class="menu-text content-padding">New!</p></a>
+          <a href="http://localhost:4200/"><p class="menu-text content-padding">Most Played</p></a>
         </div>
       </mat-expansion-panel>
     </mat-accordion>
-    <div class="space-between">Recommended</div>
-    <div class="space-between">New!</div>
-    <div class="space-between">Most Played!</div>
   </div>
+  <a href="http://localhost:4200/" class="menu last-module">
+    <div class="inline-content content-padding">
+      <span class="last-icon nohover">
+        <i class="fas fa-th-large nohover"></i>
+      </span>
+      <p class="text last-text nohover">MY GAME</p>
+    </div>
+  </a>
 </nav>
