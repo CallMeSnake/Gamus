@@ -14,7 +14,8 @@ a {
 .logo {
   height: 72px;
   border-bottom: solid;
-  border-bottom-color: #3c3c4a;
+  border-bottom-color: #97979731;
+  border-bottom-width: 1px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -113,9 +114,11 @@ a {
 
 .last-module {
   border-top: solid;
-  border-top-color: #3c3c4a;
+  border-top-color: #97979731;
+  border-top-width: 1px;
   border-bottom: solid;
-  border-bottom-color: #3c3c4a;
+  border-bottom-color: #97979731;
+  border-bottom-width: 1px;
 }
 
 .last-icon {
