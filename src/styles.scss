@@ -3,7 +3,39 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  background-color: #313242;
+}
 .mat-expansion-panel-content > .mat-expansion-panel-body {
   padding: 0 !important;
+}
+
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  width: 34px;
+  height: 34px;
+  border-radius: 5px;
+  background: #2b2c3a;
+  border: solid;
+  border-width: 1px;
+  border-color: #97979731;
+}
+.flickity-prev-next-button:hover {
+  background: #6f6eff;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: #6f6eff;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: 97.2em;
+  top: -1.32em;
+}
+.flickity-prev-next-button.next {
+  top: -1.32em;
+  right: 0em;
 }
