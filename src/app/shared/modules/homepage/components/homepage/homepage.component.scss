@@ -22,6 +22,14 @@ body {
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
+.carousel-cell2 {
+  width: 255px;
+  height: 145px;
+  margin-right: 10px;
+  background: #3c3c4a;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
 
 .carousel-image {
   display: block;
@@ -34,12 +42,34 @@ body {
   margin-right: 10px;
 }
 
+.carousel-image2 {
+  position: absolute;
+  margin-left: 0.5em;
+  display: block;
+  border-radius: 5px;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  object-position: top;
+  margin-right: 10px;
+}
+
+.image-button-box2 {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+}
+
 .margin-top {
-  margin-top: 3.65%;
+  margin-top: 1em;
 }
 
 .padding-top {
   padding-top: 5%;
+}
+
+.description-top {
+  padding-top: 1%;
 }
 
 .section-padding-top {
@@ -61,6 +91,11 @@ body {
   padding-right: 5%;
 }
 
+.description-padding {
+  padding-left: 90px;
+  padding-right: 5%;
+}
+
 .button {
   background-color: #6f6eff;
   display: flex;
@@ -69,9 +104,6 @@ body {
   border-radius: 5px;
   padding: 0.8em 1.2em;
   text-decoration: none;
-  :hover {
-    background-color: red;
-  }
 }
 
 .card-below-section {
@@ -125,6 +157,19 @@ body {
   text-decoration: none;
 }
 
+.upper-button2 {
+  position: absolute;
+  margin-top: 60px;
+  // margin-left: 6.3%;
+  background-color: #6f6eff;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+}
+
 .wallet {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -143,7 +188,7 @@ body {
 }
 
 .padding-left {
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 
 .margin-right {
