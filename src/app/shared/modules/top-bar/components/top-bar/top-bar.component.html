@@ -1,13 +1,13 @@
 <nav>
   <div>
-    <a href="http://localhost:4200/" class="link">FAQ</a>
-    <a href="http://localhost:4200/" class="link">About</a>
-    <a href="http://localhost:4200/" class="link right-border">Support</a>
+    <a href="{{ homePage }}" class="link">FAQ</a>
+    <a href="{{ homePage }}" class="link">About</a>
+    <a href="{{ homePage }}" class="link right-border">Support</a>
   </div>
   <ng-container *ngIf="isLoggedIn$ | async">
     <div class="right-part-user">
       <div class="wallet">
-        <img src="../../../../../../assets/images/interface/dollar-symbol.png" style="width: 18px" />
+        <img class="dollar-img" />
         <div>{{ money }}</div>
       </div>
       <div class="text">Hello, {{ username$ | async }}!</div>
@@ -16,8 +16,8 @@
   </ng-container>
   <ng-container *ngIf="isAnonymous$ | async">
     <div class="right-part-public">
-      <a mat-button class="sign-button text" href="http://localhost:4200/register">Sign Up</a>
-      <a mat-button class="sign-button text" href="http://localhost:4200/login">Sign In</a>
+      <a mat-button class="sign-button text" href="{{ registerPage }}">Sign Up</a>
+      <a mat-button class="sign-button text" href="{{ loginPage }}">Sign In</a>
     </div>
   </ng-container>
 </nav>
