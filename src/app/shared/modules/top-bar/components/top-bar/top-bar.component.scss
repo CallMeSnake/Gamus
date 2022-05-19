@@ -8,8 +8,7 @@ $orange-interface: #ff4738;
 nav {
   background-color: $total-background;
   height: 72px;
-  width: 70%;
-  float: right;
+  width: 90%;
   display: flex;
   align-items: center;
   padding-left: 5%;
@@ -91,7 +90,7 @@ nav {
 }
 
 .right-part-public {
-  width: 12%;
+  width: 160px;
   display: flex;
   align-items: center;
   justify-content: space-between;
