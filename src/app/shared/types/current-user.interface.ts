@@ -1,12 +1,6 @@
+import { BackendUser } from './backend-user.interface';
+
 export interface CurrentUser {
-  user: {
-    id: number;
-    email: string;
-    createdAt: string;
-    updatedAt: string;
-    username: string;
-    bio?: string;
-    image?: string;
-  };
+  user: BackendUser;
   accessToken: string | null;
 }
