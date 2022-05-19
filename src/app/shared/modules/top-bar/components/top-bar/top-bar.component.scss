@@ -1,5 +1,12 @@
+$border-color: #97979731;
+$total-background: #2b2c3a;
+$wallet-background: #3b3c4a;
+$purple: #6f6eff;
+$dark-red: #8f2117;
+$orange-interface: #ff4738;
+
 nav {
-  background-color: #2b2c3a;
+  background-color: $total-background;
   height: 72px;
   width: 70%;
   float: right;
@@ -8,14 +15,17 @@ nav {
   padding-left: 5%;
   padding-right: 5%;
   justify-content: space-between;
-  border-bottom: solid;
-  border-bottom-color: #97979731;
-  border-right-width: 1px;
+  border-bottom: 1px solid $border-color;
+}
+
+.dollar-img {
+  content: url('../../../../../../assets/images/interface/dollar-symbol.png');
+  width: 18px;
 }
 
 .text {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: white;
   font-size: 14px;
   padding-left: 1em;
   padding-right: 1em;
@@ -23,7 +33,7 @@ nav {
 
 .link {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: white;
   opacity: 0.6;
   font-size: 14px;
   text-decoration: none;
@@ -32,7 +42,7 @@ nav {
 }
 
 .link:hover {
-  color: #ffffff;
+  color: white;
   opacity: 1;
   background-color: transparent;
   text-decoration: underline;
@@ -43,8 +53,8 @@ nav {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  color: #ffffff;
-  background-color: #3b3c4a;
+  color: white;
+  background-color: $wallet-background;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,14 +67,14 @@ nav {
 }
 
 .sign-button {
-  background-color: #6f6eff;
+  background-color: $purple;
   color: white;
   display: flex;
   align-items: center;
 }
 
 .logout {
-  background-color: #8f2117;
+  background-color: $dark-red;
   color: white;
   height: 1.8em;
   display: flex;
@@ -72,7 +82,7 @@ nav {
 }
 
 .logout:hover {
-  background-color: #ff4738;
+  background-color: $orange-interface;
 }
 
 .right-part-user {
@@ -88,7 +98,5 @@ nav {
 }
 
 .right-border {
-  border-right: solid;
-  border-right-color: #97979731;
-  border-right-width: 1px;
+  border-right: 1px solid $border-color;
 }
