@@ -6,11 +6,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { BackendErrorMessagesModule } from '../shared/modules/backend-error-messages/backend-error-messages.module';
-import { TopBarModule } from '../shared/modules/top-bar/top-bar.module';
 import { PersistanceService } from '../shared/services/persistance.service';
-
 import { LoginComponent } from './components/login/login.component';
-
 import { RegisterComponent } from './components/register/register.component';
 import { AuthService } from './services/auth.service';
 import { GetCurrentUserEffect } from './store/effects/get-current-user.effect';
