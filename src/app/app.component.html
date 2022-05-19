@@ -11,8 +11,9 @@
   </mat-sidenav>
   <mat-sidenav-content class="menu">
     <top-bar></top-bar>
-    <button mat-button (click)="sidenav.toggle()">Menu</button>
+    <button mat-button class="button" (click)="sidenav.toggle()">Menu</button>
     <homepage></homepage>
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
