@@ -1,4 +1,21 @@
-<top-bar></top-bar>
-<sidebar></sidebar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    class="dimensions"
+    #sidenav
+    mode="side"
+    [(opened)]="opened"
+    (opened)="events.push('open!')"
+    (closed)="events.push('close!')"
+  >
+    <sidebar></sidebar>
+  </mat-sidenav>
 
-<router-outlet></router-outlet>
+  <mat-sidenav-content class="menu">
+    <top-bar></top-bar>
+    <button mat-button (click)="sidenav.toggle()">Menu</button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <top-bar></top-bar>
+<router-outlet></router-outlet> -->

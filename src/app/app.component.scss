@@ -1,0 +1,16 @@
+.dimensions {
+  width: 250px;
+}
+.mat-drawer-container {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.menu {
+  background-color: #3c3c4a;
+}

@@ -12,4 +12,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.store.dispatch(getCurrentUserAction());
   }
+  events: string[] = [];
+  opened!: boolean;
 }
