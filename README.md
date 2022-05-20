@@ -20,7 +20,7 @@ npm install
 npm start
 ```
 
-Application will be started on localhost:4200
+Application will be started on `localhost:4200`
 
 Shut it down manually with `Ctrl-C`.
 
@@ -34,6 +34,6 @@ npm install
 node server.js
 ```
 
-Server will start at localhost:8080
+Server will start at `localhost:8080`
 
 Shut it down manually with `Ctrl-C`.
