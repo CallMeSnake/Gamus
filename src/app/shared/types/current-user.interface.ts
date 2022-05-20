@@ -1,10 +1,6 @@
+import { UserData } from './backend-user.interface';
+
 export interface CurrentUser {
-  id: number;
-  email: string;
-  createdAt: string;
-  updatedAt: string;
-  username: string;
-  bio?: string;
-  image?: string;
+  user: UserData;
   accessToken: string | null;
 }

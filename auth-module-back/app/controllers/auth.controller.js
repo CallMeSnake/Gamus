@@ -49,14 +49,13 @@ exports.signin = (req, res) => {
   })
     .then((user) => {
       if (!user) {
-        return res.status(404).send({ message: 'User Not found.' });
+        return res.status(404).send({ message: 'User not found.' });
       }
 
       var passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
 
       if (!passwordIsValid) {
         return res.status(401).send({
-          accessToken: null,
           message: 'Invalid Password!',
         });
       }
@@ -71,9 +70,7 @@ exports.signin = (req, res) => {
           authorities.push('ROLE_' + roles[i].name.toUpperCase());
         }
         res.status(200).send({
-          id: user.id,
-          username: user.username,
-          email: user.email,
+          user: user,
           roles: authorities,
           accessToken: token,
         });
