@@ -30,6 +30,7 @@ Open another one terminal and write the following:
 
 ```shell
 cd 'path to server.js'
+npm install
 node server.js
 ```
 
