@@ -8,7 +8,7 @@ This is a test project to demonstrate using Angular with Node.js.
 
 ```shell
 git clone https://github.com/CallMeSnake/Gamus
-cd gamus
+cd %path_to_project_root%
 ```
 
 ### Install npm packages
@@ -29,7 +29,7 @@ Shut it down manually with `Ctrl-C`.
 Open another one terminal and write the following:
 
 ```shell
-cd 'path to server.js'
+cd %path_to_server.js%
 npm install
 node server.js
 ```
@@ -37,3 +37,9 @@ node server.js
 Server will start at `localhost:8080`
 
 Shut it down manually with `Ctrl-C`.
+
+### Database info
+
+To access the database, go to the website and log in. Here is all the necessary information:
+
+`auth-module-back\app\config\db.config.js`
