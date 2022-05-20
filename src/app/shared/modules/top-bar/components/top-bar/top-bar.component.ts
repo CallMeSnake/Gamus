@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+
 import { environment } from '../../../../../../environments/environment';
 import { logoutAction } from '../../../../../auth/store/actions/login-actions';
-
 import {
   currentUserSelector,
   isAnonymousSelector,
