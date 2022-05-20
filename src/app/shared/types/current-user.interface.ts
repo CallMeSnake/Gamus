@@ -1,6 +1,6 @@
-import { BackendUser } from './backend-user.interface';
+import { AboutUser } from './backend-user.interface';
 
 export interface CurrentUser {
-  user: BackendUser;
+  user: AboutUser;
   accessToken: string | null;
 }

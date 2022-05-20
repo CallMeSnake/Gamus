@@ -1,4 +1,4 @@
-export interface BackendUser {
+export interface AboutUser {
   id: number;
   email: string;
   createdAt: string;
