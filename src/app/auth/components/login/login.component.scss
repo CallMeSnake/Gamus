@@ -1,10 +1,9 @@
-$purple: #6f6eff;
-$light-purple: #a2a2ff;
-$orange-interface: #ff4738;
-$background: #313342;
-$form: #2b2c3a;
-$letters: #eee;
-$input-background: #303245;
+@import 'src/variables';
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
@@ -25,7 +24,7 @@ body {
 }
 
 .form {
-  background-color: $form;
+  background-color: $form-background;
   border-radius: 20px;
   box-sizing: border-box;
   height: fit-content;
@@ -77,7 +76,7 @@ body {
 }
 
 .cut {
-  background-color: $form;
+  background-color: $form-background;
   border-radius: 10px;
   height: 1px;
   opacity: 0;

@@ -1,12 +1,7 @@
-$border-color: #97979731;
-$total-background: #2b2c3a;
-$wallet-background: #3b3c4a;
-$purple: #6f6eff;
-$dark-red: #8f2117;
-$orange-interface: #ff4738;
+@import 'src/variables';
 
 nav {
-  background-color: $total-background;
+  background-color: $form-background;
   height: 72px;
   width: 90%;
   display: flex;

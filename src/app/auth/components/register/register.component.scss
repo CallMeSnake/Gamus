@@ -1,10 +1,4 @@
-$orange-interface: #ff4738;
-$background: #313342;
-$form-background: #2b2c3a;
-$letters: #eee;
-$input-background: #303245;
-$purple: #6f6eff;
-$light-purple: #a2a2ff;
+@import 'src/variables';
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
