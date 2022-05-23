@@ -1,9 +1,16 @@
+@import '../../../../variables.scss';
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
 input.ng-invalid.ng-touched {
-  border: 1px solid red; 
+  border: 1px solid red;
 }
 
 .error-message {
-  color:#ff4738;
+  color: $orange-interface;
   font-family: sans-serif;
   padding-left: 1em;
 }
@@ -13,11 +20,11 @@ body {
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-color: #313342;
+  background-color: $background;
 }
 
 .form {
-  background-color: #2b2c3a;
+  background-color: $form-background;
   border-radius: 20px;
   box-sizing: border-box;
   height: fit-content;
@@ -26,7 +33,7 @@ body {
 }
 
 .title {
-  color: #eee;
+  color: $letters;
   font-family: sans-serif;
   font-size: 36px;
   font-weight: 600;
@@ -34,7 +41,7 @@ body {
 }
 
 .subtitle {
-  color: #eee;
+  color: $letters;
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -56,7 +63,7 @@ body {
 }
 
 .input {
-  background-color: #303245;
+  background-color: $input-background;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -69,11 +76,10 @@ body {
 }
 
 .cut {
-  background-color: #2b2c3a;
+  background-color: $form-background;
   border-radius: 10px;
   height: 1px;
   opacity: 0;
-
   left: 20px;
   position: absolute;
   top: -15px;
@@ -86,7 +92,6 @@ body {
   width: 80px;
   height: 1px;
   opacity: 0;
-
 }
 
 .input:focus ~ .cut,
@@ -97,7 +102,7 @@ body {
 }
 
 .placeholder {
-  color: #d8d8d8;
+  color: $letters;
   font-family: sans-serif;
   left: 20px;
   line-height: 14px;
@@ -114,31 +119,30 @@ body {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #d8d8d8;
+  color: $letters;
 }
 
 .input:focus ~ .placeholder {
-  color: #ff4738;
+  color: $orange-interface;
 }
 
 .submit {
-  background-color: #6f6eff;
+  background-color: $purple;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
-  color: #eee;
+  color: $letters;
   cursor: pointer;
   font-size: 18px;
   height: 50px;
   margin-top: 38px;
   text-align: center;
   width: 100%;
-}
-.submit:hover{
-  background-color: #a2a2ff;
+  &:hover {
+    background-color: $light-purple;
+  }
 }
 
 button[disabled] {
-  background-color: #a2a2ff;
+  background-color: $light-purple;
 }
-

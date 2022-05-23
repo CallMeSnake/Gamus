@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { logoutAction } from '../../../../../auth/store/actions/login-actions';
 
+import { environment } from '../../../../../../environments/environment';
+import { logoutAction } from '../../../../../auth/store/actions/login-actions';
 import {
   currentUserSelector,
   isAnonymousSelector,
@@ -23,6 +24,10 @@ export class TopBarComponent implements OnInit {
   username$: Observable<string | undefined> = this.store.pipe(select(usernameSelector));
 
   money: number = 0;
+
+  homePage = environment.homePage;
+  registerPage = environment.homePage + '/register';
+  loginPage = environment.homePage + '/login';
 
   get random() {
     return Math.floor(Math.random() * 100) + 1;
