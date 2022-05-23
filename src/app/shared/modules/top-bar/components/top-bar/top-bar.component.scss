@@ -30,14 +30,13 @@ nav {
   font-size: 14px;
   text-decoration: none;
   padding: 0 1em;
-}
-
-.link:hover {
-  color: white;
-  opacity: 1;
-  background-color: transparent;
-  text-decoration: underline;
-  text-decoration: none;
+  &:hover {
+    color: white;
+    opacity: 1;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration: none;
+  }
 }
 
 .wallet {
@@ -59,6 +58,9 @@ nav {
   color: white;
   display: flex;
   align-items: center;
+  &:hover {
+    background-color: $light-purple;
+  }
 }
 
 .logout {
@@ -67,10 +69,9 @@ nav {
   height: 1.8em;
   display: flex;
   align-items: center;
-}
-
-.logout:hover {
-  background-color: $orange-interface;
+  &:hover {
+    background-color: $orange-interface;
+  }
 }
 
 .right-part-user {
