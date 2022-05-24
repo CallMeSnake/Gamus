@@ -1,12 +1,14 @@
+@import '../../../../../../variables.scss';
+
 body {
   width: 100%;
   float: right;
   min-height: 100vh;
-  background-color: #2b2c3a;
+  background-color: $form-background;
 }
 
 .carousel {
-  background: #fafafa;
+  background: white;
   margin: 0 60px; /* space for prev/next buttons */
 }
 
@@ -18,7 +20,7 @@ body {
   width: 255px;
   height: 294px;
   margin-right: 10px;
-  background: #3c3c4a;
+  background: $wallet-background;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
@@ -26,7 +28,7 @@ body {
   width: 255px;
   height: 145px;
   margin-right: 10px;
-  background: #3c3c4a;
+  background: $wallet-background;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
@@ -97,20 +99,24 @@ body {
 }
 
 .button {
-  background-color: #6f6eff;
+  background-color: $purple;
   display: flex;
   align-items: center;
   width: max-content;
   border-radius: 5px;
   padding: 0.8em 1.2em;
   text-decoration: none;
+  &:hover {
+    transition: 0.3s;
+    background-color: $light-purple;
+  }
 }
 
 .card-below-section {
   padding-bottom: 5%;
   border-bottom: solid;
   border-bottom-width: 1px;
-  border-bottom-color: #97979731;
+  border-bottom-color: $border-color;
 }
 
 .space-arrow {
@@ -120,12 +126,12 @@ body {
 
 .light-text {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: white;
 }
 
 .dark-text {
   font-family: 'Roboto', sans-serif;
-  color: #9899a1;
+  color: $menu-hover;
 }
 
 .px11 {
@@ -148,7 +154,7 @@ body {
   position: absolute;
   margin-top: 5%;
   margin-left: 5%;
-  background-color: #6f6eff;
+  background-color: $purple;
   display: flex;
   align-items: center;
   width: max-content;
@@ -160,7 +166,7 @@ body {
 .upper-button2 {
   position: absolute;
   margin-top: 60px;
-  background-color: #6f6eff;
+  background-color: $purple;
   display: flex;
   align-items: center;
   width: max-content;
@@ -173,8 +179,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  color: #ffffff;
-  background-color: #3b3c4a;
+  color: white;
+  background-color: $wallet-background;
   display: flex;
   align-items: center;
   justify-content: space-between;
