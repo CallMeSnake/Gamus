@@ -9,7 +9,7 @@
       class="main-carousel carousel-padding-top"
       data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
     >
-      <div class="carousel-cell" *ngFor="let game of games">
+      <div class="carousel-cell" *ngFor="let game of weeklyGames">
         <a matt-button [href]="homePage" class="font-size12 light-text upper-button">{{ game.genre }}</a>
         <img class="carousel-image" [src]="game.imgSrc" [alt]="game.imgAlt" />
         <section class="padding-top">
@@ -39,7 +39,7 @@
       class="main-carousel carousel-padding-top"
       data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
     >
-      <div *ngFor="let game of games2">
+      <div *ngFor="let game of popularGames">
         <div class="image-button-box2">
           <img class="carousel-image2" [src]="game.imgSrc" [alt]="game.imgAlt" />
           <a matt-button [href]="homePage" class="font-size12 light-text upper-button2">{{ game.genre }}</a>
