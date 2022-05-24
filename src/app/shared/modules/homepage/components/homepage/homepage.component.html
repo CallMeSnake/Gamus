@@ -1,423 +1,61 @@
 <body>
-  <section class="side-padding section-padding-top">
-    <div class="px11 dark-text">DON'T MISS THEM</div>
-    <div class="flex space-between">
-      <div class="px22 light-text">Weekly selection</div>
-      <a [href]="homePage" class="px12 light-text button">All Games</a>
+  <section class="section-main">
+    <div class="font-size11 dark-text">DON'T MISS THEM</div>
+    <div class="section-title">
+      <div class="font-size22 light-text">Weekly selection</div>
+      <a [href]="homePage" class="font-size12 light-text button">All Games</a>
     </div>
     <div
       class="main-carousel carousel-padding-top"
       data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
     >
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Action</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/pubg.jpg" alt="pubg" />
+      <div class="carousel-cell" *ngFor="let game of games">
+        <a matt-button [href]="homePage" class="font-size12 light-text upper-button">{{ game.genre }}</a>
+        <img class="carousel-image" [src]="game.imgSrc" [alt]="game.imgAlt" />
         <section class="padding-top">
-          <div class="px16 light-text side-padding">PUBG</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            Here one hundred players fight in a battle royale.
+          <div class="font-size16 light-text side-padding">{{ game.title }}</div>
+          <div class="font-size14 dark-text padding-top card-below-section side-padding">
+            {{ game.description }}
           </div>
           <div class="side-padding flex space-between">
             <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">34.99</div>
+              <img class="dollar-img" />
+              <div class="padding-left">{{ game.price }}</div>
             </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Action</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/overwatch.jpeg" alt="overwatch" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Overwatch</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            A team-based game starring a diverse cast of powerful heroes.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">29.99</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Action</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/rock.jpg" alt="dwarfs" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Deep Rock Galactic</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            A 1-4 player cooperative first-person shooter.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">29.99</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Action</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/dying.jpg" alt="dying-light" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Dying Light</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            Fight for survival in a post-apocalyptic open world.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">29.99</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Adventure</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/space.jpg" alt="space-engineers" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Space Engineers</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            A sandbox game about engineering in space.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">29.99</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Action</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/siege.jpg" alt="siege" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Tom Clancy's Rainbow Six Siege</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            A tactical shooter that prioritises careful planning.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">29.99</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Intellectual</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/vscode.png" alt="vscode" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Visual Studio Code</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            Play neverending quiz & brain games to train your thinking.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">FREE</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-          </div>
-        </section>
-      </div>
-      <div class="carousel-cell">
-        <a matt-button [href]="homePage" class="px12 light-text upper-button">Action</a>
-        <img class="carousel-image" src="../../../../../../assets/images/posters/warface.jpg" alt="warface" />
-        <section class="padding-top">
-          <div class="px16 light-text side-padding">Warface</div>
-          <div class="px14 dark-text padding-top card-below-section side-padding">
-            A free-to-play FPS game similar to tactical shooters.
-          </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
-              <img
-                src="../../../../../../assets/images/interface/dollar-symbol.png"
-                alt="dollar-symbol"
-                style="width: 18px"
-              />
-              <div class="padding-left">FREE</div>
-            </div>
-            <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
+            <a matt-button [href]="homePage" class="font-size12 light-text button margin-top">Purchase</a>
           </div>
         </section>
       </div>
     </div>
   </section>
   <!-- Second Section///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <section class="side-padding section-padding-top">
-    <div class="px11 dark-text">TO THE TOP</div>
-    <div class="flex space-between">
-      <div class="px22 light-text">Popular games</div>
-      <a [href]="homePage" class="px12 light-text button">All Games</a>
+  <section class="section-main">
+    <div class="font-size11 dark-text">TO THE TOP</div>
+    <div class="section-title">
+      <div class="font-size22 light-text">Popular games</div>
+      <a [href]="homePage" class="font-size12 light-text button">All Games</a>
     </div>
     <div
       class="main-carousel carousel-padding-top"
       data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
     >
-      <div>
+      <div *ngFor="let game of games2">
         <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/elden-ring.jpg"
-            alt="elden-ring"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Adventure</a>
+          <img class="carousel-image2" [src]="game.imgSrc" [alt]="game.imgAlt" />
+          <a matt-button [href]="homePage" class="font-size12 light-text upper-button2">{{ game.genre }}</a>
         </div>
         <div class="carousel-cell2 margin-top">
           <section class="padding-top">
-            <div class="px16 light-text description-padding">Elden Ring</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              A World Created By Hidetaka Miyazaki.
+            <div class="font-size16 light-text description-padding">{{ game.title }}</div>
+            <div class="font-size14 dark-text description-top card-below-section description-padding">
+              {{ game.description }}
             </div>
             <div class="side-padding flex space-between">
               <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">59.99</div>
+                <img class="dollar-img" />
+                <div class="padding-left">{{ game.price }}</div>
               </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/god-of-war.jpg"
-            alt="god-of-war"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Adventure</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">God of War</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              The God of War has changed...
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">39.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/stanley-parable.jpg"
-            alt="stanley-parable"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Casual</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">Stanley Parable: UD</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              Re-imagining of The Stanley Parable.
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">14.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/rogue-legacy.jpg"
-            alt="rogue-legacy-2"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Adventure</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">Rogue Legacy 2</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              Rogue Legacy and a sequel together.
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">29.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/13-sentinels.jpg"
-            alt="13-sentinels"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Adventure</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">13 Sentinels</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              The storytellers behind Odin Sphere.
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">19.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/norco.jpg"
-            alt="norco"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Adventure</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">NORCO</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              A Southern Gothic narrative adventure.
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">19.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/horizon.jpg"
-            alt="horizon"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Adventure</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">Horizon FW</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              Join Aloy as she braves the West.
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">59.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div>
-        <div class="image-button-box2">
-          <img
-            class="carousel-image2"
-            src="../../../../../../assets/images/posters/mini-posters/gran-turismo.jpg"
-            alt="gran-turismo"
-          />
-          <a matt-button [href]="homePage" class="px12 light-text upper-button2">Racing</a>
-        </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="px16 light-text description-padding">Gran Turismo 7</div>
-            <div class="px14 dark-text description-top card-below-section description-padding">
-              Legendary GT Simulator.
-            </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
-                <img
-                  src="../../../../../../assets/images/interface/dollar-symbol.png"
-                  alt="dollar-symbol"
-                  style="width: 18px"
-                />
-                <div class="padding-left">59.99</div>
-              </div>
-              <a matt-button [href]="homePage" class="px12 light-text button margin-top">Purchase</a>
+              <a matt-button [href]="homePage" class="font-size12 light-text button margin-top">Purchase</a>
             </div>
           </section>
         </div>
