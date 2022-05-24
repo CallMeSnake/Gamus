@@ -1,9 +1,11 @@
+@import '../../../../../../variables.scss';
+
 nav {
   float: left;
   width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
-  background-color: #313242;
+  background-color: $background;
   min-height: 100vh;
 }
 
@@ -18,7 +20,7 @@ a {
 .logo {
   height: 72px;
   border-bottom: solid;
-  border-bottom-color: #97979731;
+  border-bottom-color: $border-color;
   border-bottom-width: 1px;
   display: flex;
   flex-direction: row;
@@ -27,13 +29,12 @@ a {
 
 .text {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: white;
   font-size: 14px;
 }
 
 .content-padding {
   padding-left: 10%;
-  // padding-right: 10%;
 }
 
 .header-padding {
@@ -51,7 +52,7 @@ a {
 }
 
 .alfa-logo {
-  background-color: #3b3c4a;
+  background-color: $wallet-background;
   border-radius: 5px;
   padding-right: 0.5em;
   padding-left: 0.5em;
@@ -78,7 +79,7 @@ a {
 
 .icon {
   font-size: 18px;
-  color: #9899a1;
+  color: $menu-hover;
   padding-left: 0.5em;
 }
 
@@ -88,12 +89,12 @@ a {
 }
 
 .inline-text {
-  color: #9899a1;
+  color: $menu-hover;
   padding: 1em;
 }
 
 .menu-text {
-  color: #ffffff;
+  color: white;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -104,34 +105,34 @@ a {
 
 .menu {
   :not(.nohover):hover {
-    background-color: #3c3c4a;
+    background-color: $wallet-background;
     border-left: solid;
-    border-left-color: #6f6eff;
+    border-left-color: $purple;
     transition: 0.2s;
   }
 }
 
 .button {
   :hover > .inline-text {
-    color: #ffffff;
+    color: white;
   }
   :hover > .icon {
-    color: #6f6eff;
+    color: $purple;
   }
 }
 
 .last-module {
   border-top: solid;
-  border-top-color: #97979731;
+  border-top-color: $border-color;
   border-top-width: 1px;
   border-bottom: solid;
-  border-bottom-color: #97979731;
+  border-bottom-color: $border-color;
   border-bottom-width: 1px;
 }
 
 .last-icon {
   font-size: 20px;
-  color: #ffffff;
+  color: white;
 }
 
 .last-text {
