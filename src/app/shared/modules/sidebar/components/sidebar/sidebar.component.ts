@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatAccordionDisplayMode } from '@angular/material/expansion';
+import { environment } from '../../../../../../environments/environment';
 
 @Component({
   selector: 'sidebar',
@@ -8,4 +9,6 @@ import { MatAccordionDisplayMode } from '@angular/material/expansion';
 })
 export class SidebarComponent {
   mode: MatAccordionDisplayMode = 'default';
+
+  homePage = environment.homePage;
 }
