@@ -131,9 +131,7 @@ body {
 
 .card-below-section {
   padding-bottom: 5%;
-  border-bottom: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: $border-color;
+  border-bottom: solid 1px $border-color;
 }
 
 .space-arrow {
@@ -203,10 +201,7 @@ body {
   justify-content: space-between;
   width: 3.25em;
   border-radius: 5px;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 0.2em 0.5em;
 }
 
 .padding-left {
