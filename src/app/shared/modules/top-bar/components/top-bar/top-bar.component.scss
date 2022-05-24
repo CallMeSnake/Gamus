@@ -14,6 +14,7 @@ nav {
 .dollar-img {
   content: url('../../../../../../assets/images/interface/dollar-symbol.png');
   width: 18px;
+  alt: 'dollar-symbol';
 }
 
 .text {
@@ -29,15 +30,17 @@ nav {
   opacity: 0.6;
   font-size: 14px;
   text-decoration: none;
-  padding: 0 1em;
+  &:hover {
+    color: white;
+    opacity: 1;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration: none;
+  }
 }
 
-.link:hover {
-  color: white;
-  opacity: 1;
-  background-color: transparent;
-  text-decoration: underline;
-  text-decoration: none;
+.position-center {
+  padding: 0 1em;
 }
 
 .wallet {
@@ -59,6 +62,10 @@ nav {
   color: white;
   display: flex;
   align-items: center;
+  &:hover {
+    transition: 0.3s;
+    background-color: $light-purple;
+  }
 }
 
 .logout {
@@ -67,10 +74,9 @@ nav {
   height: 1.8em;
   display: flex;
   align-items: center;
-}
-
-.logout:hover {
-  background-color: $orange-interface;
+  &:hover {
+    background-color: $orange-interface;
+  }
 }
 
 .right-part-user {
@@ -86,5 +92,41 @@ nav {
 }
 
 .right-border {
+  padding-right: 1em;
   border-right: 1px solid $border-color;
+}
+
+@media screen and (max-width: 450px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+  .link {
+    padding: 0;
+    width: 50px;
+  }
+  .left-part-public {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .right-border {
+    border-right: none;
+  }
+  .right-part-public {
+    width: 100%;
+    padding: 0 5%;
+    justify-content: center;
+  }
+  .margin-right {
+    margin-right: 15px;
+  }
+  .position-center {
+    display: flex;
+    justify-content: center;
+    padding: 0 1em;
+  }
 }

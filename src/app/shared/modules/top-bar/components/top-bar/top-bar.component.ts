@@ -26,8 +26,8 @@ export class TopBarComponent implements OnInit {
   money: number = 0;
 
   homePage = environment.homePage;
-  registerPage = environment.homePage + '/register';
-  loginPage = environment.homePage + '/login';
+  registerPage = `${this.homePage}/register`;
+  loginPage = `${this.homePage}/login`;
 
   get random() {
     return Math.floor(Math.random() * 100) + 1;
