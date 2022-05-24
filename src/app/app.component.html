@@ -1,12 +1,5 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav
-    class="dimensions"
-    #sidenav
-    mode="side"
-    [(opened)]="opened"
-    (opened)="events.push('open!')"
-    (closed)="events.push('close!')"
-  >
+  <mat-sidenav class="dimensions" #sidenav mode="side">
     <sidebar></sidebar>
   </mat-sidenav>
   <mat-sidenav-content class="menu">
