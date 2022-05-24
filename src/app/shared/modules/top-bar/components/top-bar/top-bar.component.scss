@@ -1,78 +1,82 @@
+@import '../../../../../../variables.scss';
+
 nav {
-  background-color: #2b2c3a;
+  background-color: $form-background;
   height: 72px;
-  width: 72.6%;
-  float: right;
+  width: 90%;
   display: flex;
   align-items: center;
-  padding-left: 3.3%;
-  padding-right: 4.1%;
+  padding: 0 5%;
   justify-content: space-between;
-  border-bottom: solid;
-  border-bottom-color: #97979731;
-  border-bottom-width: 1px;
+  border-bottom: 1px solid $border-color;
+}
+
+.dollar-img {
+  content: url('../../../../../../assets/images/interface/dollar-symbol.png');
+  width: 18px;
+  alt: 'dollar-symbol';
 }
 
 .text {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: white;
   font-size: 14px;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0 1em;
 }
 
 .link {
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: white;
   opacity: 0.6;
   font-size: 14px;
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 1em;
+  &:hover {
+    color: white;
+    opacity: 1;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration: none;
+  }
 }
 
-.link:hover {
-  color: #ffffff;
-  opacity: 1;
-  background-color: transparent;
-  text-decoration: underline;
-  text-decoration: none;
+.position-center {
+  padding: 0 1em;
 }
 
 .wallet {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  color: #ffffff;
-  background-color: #3b3c4a;
+  color: white;
+  background-color: $wallet-background;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 3.25em;
   border-radius: 5px;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 0.2em 0.5em;
 }
 
 .sign-button {
-  background-color: #6f6eff;
+  background-color: $purple;
   color: white;
   display: flex;
   align-items: center;
+  &:hover {
+    transition: 0.3s;
+    background-color: $light-purple;
+  }
 }
 
 .logout {
-  background-color: #8f2117;
+  background-color: $dark-red;
   color: white;
   height: 1.8em;
   display: flex;
   align-items: center;
-}
-
-.logout:hover {
-  background-color: #ff4738;
+  &:hover {
+    background-color: $orange-interface;
+  }
 }
 
 .right-part-user {
@@ -81,8 +85,48 @@ nav {
 }
 
 .right-part-public {
-  width: 12%;
+  width: 160px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.right-border {
+  padding-right: 1em;
+  border-right: 1px solid $border-color;
+}
+
+@media screen and (max-width: 450px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+  .link {
+    padding: 0;
+    width: 50px;
+  }
+  .left-part-public {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .right-border {
+    border-right: none;
+  }
+  .right-part-public {
+    width: 100%;
+    padding: 0 5%;
+    justify-content: center;
+  }
+  .margin-right {
+    margin-right: 15px;
+  }
+  .position-center {
+    display: flex;
+    justify-content: center;
+    padding: 0 1em;
+  }
 }
