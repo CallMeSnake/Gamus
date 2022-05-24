@@ -1,0 +1,89 @@
+<nav>
+  <a [href]="homePage" class="logo content-padding">
+    <img class="logo-img" />
+    <div class="text logo-padding">GAMUS</div>
+    <div class="text alfa-logo">alfa</div>
+  </a>
+  <div class="text">
+    <mat-accordion multi [displayMode]="mode">
+      <mat-expansion-panel class="menu padding-top">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="space-between nohover">
+            <div class="header-padding nohover">GAMES</div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="nohover">
+          <a [href]="homePage"><p class="menu-text content-padding">All Games</p></a>
+          <div class="nohover">
+            <mat-expansion-panel class="nohover">
+              <mat-expansion-panel-header class="menu">
+                <mat-panel-title class="space-between header-padding nohover">
+                  <div class="nohover">Categories</div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <a [href]="homePage" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-fighter-jet nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Action</p>
+                </div>
+              </a>
+              <a [href]="homePage" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-rocket nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Adventure</p>
+                </div>
+              </a>
+              <a [href]="homePage" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-puzzle-piece nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Casual</p>
+                </div>
+              </a>
+              <a [href]="homePage" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-chess nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Strategy</p>
+                </div>
+              </a>
+              <a [href]="homePage" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-brain nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Intellectual</p>
+                </div>
+              </a>
+              <a [href]="homePage" class="space-between button">
+                <div class="inline-content content-padding">
+                  <span class="icon nohover">
+                    <i class="fas fa-volleyball-ball nohover"></i>
+                  </span>
+                  <p class="inline-space inline-text nohover">Sport</p>
+                </div>
+              </a>
+            </mat-expansion-panel>
+          </div>
+          <a [href]="homePage"><p class="menu-text content-padding">Recommended</p></a>
+          <a [href]="homePage" class="space-between"><p class="menu-text content-padding">New!</p></a>
+          <a [href]="homePage"><p class="menu-text content-padding">Most Played</p></a>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <a [href]="homePage" class="menu last-module">
+    <div class="inline-content content-padding">
+      <span class="last-icon nohover">
+        <i class="fas fa-th-large nohover"></i>
+      </span>
+      <p class="text last-text nohover">MY GAME</p>
+    </div>
+  </a>
+</nav>
