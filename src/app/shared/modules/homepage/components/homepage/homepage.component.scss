@@ -7,6 +7,12 @@ body {
   background-color: $form-background;
 }
 
+.dollar-img {
+  content: url('../../../../../../assets/images/interface/dollar-symbol.png');
+  width: 18px;
+  alt: 'dollar-symbol';
+}
+
 .section-main {
   padding: 3em 5% 0 5%;
 }
