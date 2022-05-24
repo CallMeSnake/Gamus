@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .dimensions {
   width: 250px;
 }
@@ -12,10 +14,17 @@
 }
 
 .menu {
-  // background-color: #3c3c4a;
   background-color: #2b2c3a;
 }
 
 .button {
-  margin-left: 5%;
+  margin: 1em 0 1em 5%;
+  color: white;
+  background-color: $form-background;
+  border: 1px solid $border-color;
+  &:hover {
+    transition: 0.3s;
+    color: black;
+    background-color: white;
+  }
 }
