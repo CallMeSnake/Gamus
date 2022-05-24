@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../../../../environments/environment';
 
+interface Game {
+  genre: string;
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  description: string;
+  price: string;
+}
+
 @Component({
   selector: 'homepage',
   templateUrl: './homepage.component.html',
@@ -9,7 +18,7 @@ import { environment } from '../../../../../../environments/environment';
 export class HomepageComponent {
   homePage = environment.homePage;
 
-  games: Game[] = [
+  weeklyGames: Game[] = [
     {
       genre: 'Action',
       imgSrc: '../../../../../../assets/images/posters/pubg.jpg',
@@ -76,7 +85,7 @@ export class HomepageComponent {
     },
   ];
 
-  games2: Game[] = [
+  popularGames: Game[] = [
     {
       imgSrc: '../../../../../../assets/images/posters/mini-posters/elden-ring.jpg',
       imgAlt: 'elden-ring',
@@ -142,13 +151,4 @@ export class HomepageComponent {
       price: '59.99',
     },
   ];
-}
-
-class Game {
-  genre!: string;
-  imgSrc!: string;
-  imgAlt!: string;
-  title!: string;
-  description!: string;
-  price!: string;
 }
