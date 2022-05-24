@@ -1,7 +1,7 @@
 <nav>
-  <div>
+  <div class="left-part-public">
     <a href="{{ homePage }}" class="link">FAQ</a>
-    <a href="{{ homePage }}" class="link">About</a>
+    <a href="{{ homePage }}" class="link position-center">About</a>
     <a href="{{ homePage }}" class="link right-border">Support</a>
   </div>
   <ng-container *ngIf="isLoggedIn$ | async">
@@ -16,7 +16,7 @@
   </ng-container>
   <ng-container *ngIf="isAnonymous$ | async">
     <div class="right-part-public">
-      <a mat-button class="sign-button text" href="{{ registerPage }}">Sign Up</a>
+      <a mat-button class="sign-button text margin-right" href="{{ registerPage }}">Sign Up</a>
       <a mat-button class="sign-button text" href="{{ loginPage }}">Sign In</a>
     </div>
   </ng-container>
