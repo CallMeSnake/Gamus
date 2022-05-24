@@ -7,6 +7,17 @@ body {
   background-color: $form-background;
 }
 
+.section-main {
+  padding: 3em 5% 0 5%;
+}
+
+.section-title {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .carousel {
   background: white;
   margin: 0 60px; /* space for prev/next buttons */
@@ -134,19 +145,19 @@ body {
   color: $menu-hover;
 }
 
-.px11 {
+.font-size11 {
   font-size: 11px;
 }
 
-.px12 {
+.font-size12 {
   font-size: 12px;
 }
 
-.px16 {
+.font-size16 {
   font-size: 16px;
 }
 
-.px22 {
+.font-size22 {
   font-size: 22px;
 }
 
