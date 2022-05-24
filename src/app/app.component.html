@@ -1,5 +1,10 @@
-<top-bar></top-bar>
-<!-- <sidebar></sidebar> -->
-<!-- <homepage></homepage> -->
-
-<router-outlet></router-outlet>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="dimensions" #sidenav mode="side">
+    <sidebar></sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content class="menu">
+    <top-bar></top-bar>
+    <button mat-button class="button" (click)="sidenav.toggle()">Menu</button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
