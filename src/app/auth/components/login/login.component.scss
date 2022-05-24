@@ -19,8 +19,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  background-color: $background;
+  background-color: $form-background;
 }
 
 .form {
@@ -30,6 +29,7 @@ body {
   height: fit-content;
   padding: 20px;
   width: 320px;
+  border: 1px solid $border-color;
 }
 
 .title {
@@ -139,6 +139,7 @@ body {
   text-align: center;
   width: 100%;
   &:hover {
+    transition: 0.3s;
     background-color: $light-purple;
   }
 }
