@@ -12,7 +12,6 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
-import { HomepageModule } from './shared/modules/homepage/homepage.module';
 import { SidebarModule } from './shared/modules/sidebar/sidebar.module';
 import { TopBarModule } from './shared/modules/top-bar/top-bar.module';
 import { AuthInterceptor } from './shared/services/auth-interceptor.service';
@@ -36,7 +35,6 @@ import { MaterialExampleModule } from '../material.module';
     MatNativeDateModule,
     MaterialExampleModule,
     ReactiveFormsModule,
-    HomepageModule,
   ],
   providers: [
     PersistanceService,
