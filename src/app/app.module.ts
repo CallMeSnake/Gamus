@@ -18,6 +18,7 @@ import { AuthInterceptor } from './shared/services/auth-interceptor.service';
 import { PersistanceService } from './shared/services/persistance.service';
 import { MaterialExampleModule } from '../material.module';
 import { HomepageModule } from './shared/modules/homepage/homepage.module';
+import { FooterModule } from './shared/modules/footer/footer.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,6 +38,7 @@ import { HomepageModule } from './shared/modules/homepage/homepage.module';
     MaterialExampleModule,
     ReactiveFormsModule,
     HomepageModule,
+    FooterModule,
   ],
   providers: [
     PersistanceService,
