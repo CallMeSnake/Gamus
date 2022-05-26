@@ -10,19 +10,19 @@
       data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
     >
       <div class="carousel-cell" *ngFor="let game of weeklyGames">
-        <a matt-button [href]="homePage" class="font-size12 light-text upper-button">{{ game.genre }}</a>
+        <a matt-button [href]="homePage" class="game-genre">{{ game.genre }}</a>
         <img class="carousel-image" [src]="game.imgSrc" [alt]="game.imgAlt" />
-        <section class="padding-top">
-          <div class="font-size16 light-text side-padding">{{ game.title }}</div>
-          <div class="font-size14 dark-text padding-top card-below-section side-padding">
+        <section class="game-info">
+          <div class="game-title">{{ game.title }}</div>
+          <div class="game-description">
             {{ game.description }}
           </div>
-          <div class="side-padding flex space-between">
-            <div class="wallet margin-top">
+          <div class="game-purchase">
+            <div class="game-price">
               <img class="dollar-img" />
-              <div class="padding-left">{{ game.price }}</div>
+              <div>{{ game.price }}</div>
             </div>
-            <a matt-button [href]="homePage" class="font-size12 light-text button margin-top">Purchase</a>
+            <a matt-button [href]="homePage" class="purchase-button">Purchase</a>
           </div>
         </section>
       </div>
@@ -40,27 +40,27 @@
       data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
     >
       <div *ngFor="let game of popularGames">
-        <div class="image-button-box2">
-          <img class="carousel-image2" [src]="game.imgSrc" [alt]="game.imgAlt" />
-          <a matt-button [href]="homePage" class="font-size12 light-text upper-button2">{{ game.genre }}</a>
+        <div class="image-button-box">
+          <img class="carousel-image-small" [src]="game.imgSrc" [alt]="game.imgAlt" />
+          <a matt-button [href]="homePage" class="small-game-genre">{{ game.genre }}</a>
         </div>
-        <div class="carousel-cell2 margin-top">
-          <section class="padding-top">
-            <div class="font-size16 light-text description-padding">{{ game.title }}</div>
-            <div class="font-size14 dark-text description-top card-below-section description-padding">
+        <div class="small-game-info">
+          <section class="small-game-section">
+            <div class="small-game-title">{{ game.title }}</div>
+            <div class="smaill-game-description">
               {{ game.description }}
             </div>
-            <div class="side-padding flex space-between">
-              <div class="wallet margin-top">
+            <div class="game-purchase">
+              <div class="game-price">
                 <img class="dollar-img" />
-                <div class="padding-left">{{ game.price }}</div>
+                <div>{{ game.price }}</div>
               </div>
-              <a matt-button [href]="homePage" class="font-size12 light-text button margin-top">Purchase</a>
+              <a matt-button [href]="homePage" class="purchase-button">Purchase</a>
             </div>
           </section>
         </div>
       </div>
     </div>
   </section>
-  <div class="section-padding-top"></div>
+  <div class="section-main"></div>
 </body>

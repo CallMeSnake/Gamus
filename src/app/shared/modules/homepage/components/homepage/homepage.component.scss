@@ -11,6 +11,7 @@ body {
   content: url('../../../../../../assets/images/interface/dollar-symbol.png');
   width: 18px;
   alt: 'dollar-symbol';
+  padding-right: 0.5em;
 }
 
 .section-main {
@@ -56,14 +57,151 @@ body {
 .carousel-padding-top {
   padding-top: 1em;
 }
-/////////////////////////////////////////////////////////////////////////////////////////
+
+.game-genre {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+  background-color: $purple;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+}
+
+.game-info {
+  padding-top: 5%;
+}
+
+.game-title {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding: 0 5%;
+}
+
+.game-description {
+  font-family: 'Roboto', sans-serif;
+  color: $menu-hover;
+  padding: 5%;
+  border-bottom: solid 1px $border-color;
+}
+
+.game-purchase {
+  padding: 0 5%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.game-price {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  background-color: $wallet-background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.25em;
+  border-radius: 5px;
+  // padding: 0.2em 0.5em 0.2em;
+  margin-top: 1em;
+}
+
+.purchase-button {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: $purple;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0.8em 1.2em;
+  text-decoration: none;
+  margin-top: 1em;
+  &:hover {
+    transition: 0.3s;
+    background-color: $light-purple;
+  }
+}
+
+.image-button-box {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+}
+
+.carousel-image-small {
+  position: absolute;
+  margin-left: 0.5em;
+  display: block;
+  border-radius: 5px;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  object-position: top;
+  margin-right: 10px;
+}
+
+.small-game-genre {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  position: absolute;
+  margin-top: 60px;
+  background-color: $purple;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+}
+
+.small-game-info {
+  width: 255px;
+  height: 145px;
+  margin-right: 10px;
+  background: $wallet-background;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+  margin-top: 1em;
+}
+
+.small-game-section {
+  padding-top: 5%;
+}
+
+.small-game-title {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding-left: 90px;
+  padding-right: 5%;
+}
+
+.smaill-game-description {
+  font-family: 'Roboto', sans-serif;
+  color: $menu-hover;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  border-bottom: solid 1px $border-color;
+  padding-left: 90px;
+  padding-right: 5%;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .carousel {
   background: white;
   margin: 0 60px; /* space for prev/next buttons */
-}
-
-.carousel-padding-top {
-  padding-top: 1em;
 }
 
 .carousel-cell {
@@ -94,7 +232,7 @@ body {
   margin-right: 10px;
 }
 
-.carousel-image2 {
+.carousel-image-small {
   position: absolute;
   margin-left: 0.5em;
   display: block;
@@ -106,7 +244,7 @@ body {
   margin-right: 10px;
 }
 
-.image-button-box2 {
+.image-button-box {
   display: flex;
   justify-content: center;
   width: 90px;
