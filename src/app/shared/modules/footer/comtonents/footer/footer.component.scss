@@ -1,0 +1,55 @@
+@import '../../../../../../variables.scss';
+
+.footer {
+  margin-top: 2em;
+  padding: 2em 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $border-color;
+}
+
+.copyright {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-text {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.copyright-img {
+  content: url('../../../../../../assets/images/interface/logo.png');
+  alt: 'logo';
+}
+
+.links-section {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .copyright {
+    padding-top: 1em;
+  }
+  .links-section {
+    width: 100%;
+  }
+}
