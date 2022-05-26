@@ -1,0 +1,66 @@
+<body>
+  <section class="section-main">
+    <div class="carousel-small-title">DON'T MISS THEM</div>
+    <div class="carousel-title-section">
+      <div class="carousel-title">Weekly selection</div>
+      <a [href]="homePage" class="all-games-button">All Games</a>
+    </div>
+    <div
+      class="main-carousel carousel-padding-top"
+      data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
+    >
+      <div class="carousel-cell" *ngFor="let game of weeklyGames">
+        <a matt-button [href]="homePage" class="game-genre">{{ game.genre }}</a>
+        <img class="carousel-image" [src]="game.imgSrc" [alt]="game.imgAlt" />
+        <section class="game-info">
+          <div class="game-title">{{ game.title }}</div>
+          <div class="game-description">
+            {{ game.description }}
+          </div>
+          <div class="game-purchase">
+            <div class="game-price">
+              <img class="dollar-img" />
+              <div>{{ game.price }}</div>
+            </div>
+            <a matt-button [href]="homePage" class="purchase-button">Purchase</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!-- Second Section///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <section class="section-main">
+    <div class="carousel-small-title">TO THE TOP</div>
+    <div class="carousel-title-section">
+      <div class="carousel-title">Popular games</div>
+      <a [href]="homePage" class="all-games-button">All Games</a>
+    </div>
+    <div
+      class="main-carousel carousel-padding-top"
+      data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "autoPlay": true, "imagesLoaded": true, "pageDots": false }'
+    >
+      <div *ngFor="let game of popularGames">
+        <div class="image-button-box">
+          <img class="carousel-image-small" [src]="game.imgSrc" [alt]="game.imgAlt" />
+          <a matt-button [href]="homePage" class="small-game-genre">{{ game.genre }}</a>
+        </div>
+        <div class="small-game-info">
+          <section class="small-game-section">
+            <div class="small-game-title">{{ game.title }}</div>
+            <div class="smaill-game-description">
+              {{ game.description }}
+            </div>
+            <div class="game-purchase">
+              <div class="game-price">
+                <img class="dollar-img" />
+                <div>{{ game.price }}</div>
+              </div>
+              <a matt-button [href]="homePage" class="purchase-button">Purchase</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-main"></div>
+</body>
