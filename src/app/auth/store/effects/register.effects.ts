@@ -34,10 +34,7 @@ export class RegisterEffect {
       this.actions$.pipe(
         ofType(registerSuccessAction),
         tap(() => {
-          console.log('Success'),
-            this.router.navigateByUrl('/').then(() => {
-              window.location.reload();
-            });
+          console.log('Success'), this.router.navigateByUrl('/').then(() => window.location.reload());
         })
       ),
     { dispatch: false }

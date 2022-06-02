@@ -45,10 +45,7 @@ export class LoginEffect {
       this.actions$.pipe(
         ofType(loginSuccessAction),
         tap(() => {
-          console.log('Success'),
-            this.router.navigateByUrl('/').then(() => {
-              window.location.reload();
-            });
+          console.log('Success'), this.router.navigateByUrl('/').then(() => window.location.reload());
         })
       ),
     { dispatch: false }
