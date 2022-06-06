@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://localhost:8080/api',
+  apiUrl: 'https://gamus-project.herokuapp.com/api',
+  homePage: 'https://gamus-project.herokuapp.com',
 };
