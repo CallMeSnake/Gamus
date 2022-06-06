@@ -1,15 +1,22 @@
 const express = require('express');
-const cors = require('cors');
 
-var bodyParser = require('body-parser');
 const app = express();
+const root = '/dist/gamus';
+
+app.use(express.static(__dirname + root));
+app.get('/*', function (_, res) {
+  res.sendFile('index.html', { root: root + '/' });
+});
+
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const jsonParser = express.json();
 
 app.use(jsonParser);
 
 var corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: ['http://localhost:4200', 'https://gamus-project.herokuapp.com'],
 };
 
 app.use(cors(corsOptions));
