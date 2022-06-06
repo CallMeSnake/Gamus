@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const root = '/dist/gamus';
+const root = '../dist/gamus';
 
 app.use(express.static(__dirname + root));
 app.get('/*', function (_, res) {
