@@ -1,12 +1,11 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
-const root = '../dist/gamus';
+const root = __dirname + '/dist/gamus';
 
-app.use(express.static(__dirname + root));
-app.get('/*', function (_, res) {
-  res.sendFile('index.html', { root: root + '/' });
-});
+app.use(express.static(root));
+app.get('/*', (_, res) => res.sendFile('index.html', { root }));
 
 const cors = require('cors');
 const bodyParser = require('body-parser');
