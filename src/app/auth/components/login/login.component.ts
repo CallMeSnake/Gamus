@@ -30,8 +30,6 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    console.log('submit', this.form.value, this.form.valid);
-
     this.store.dispatch(loginAction({ request: this.form.value }));
   }
 }

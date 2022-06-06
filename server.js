@@ -5,7 +5,8 @@ const app = express();
 const root = __dirname + '/dist/gamus';
 
 app.use(express.static(root));
-app.get('/*', (_, res) => res.sendFile('index.html', { root }));
+// If route does not contain '/api' (used for CRUD operations) it should return index page
+app.use(/\/((?!api).)*/, (_, res) => res.sendFile('index.html', { root }));
 
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -30,10 +31,6 @@ const db = require('./app/models');
 const Role = db.role;
 
 db.sequelize.sync();
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Gamus application.' });
-});
 
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);

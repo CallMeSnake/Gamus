@@ -4,12 +4,7 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../../../../../../environments/environment';
 import { logoutAction } from '../../../../../auth/store/actions/login-actions';
-import {
-  currentUserSelector,
-  isAnonymousSelector,
-  isLoggedInSelector,
-  usernameSelector,
-} from '../../../../../auth/store/auth.selectors';
+import { currentUserSelector, isLoggedInSelector, usernameSelector } from '../../../../../auth/store/auth.selectors';
 import { CurrentUser } from '../../../../types/current-user.interface';
 
 @Component({
@@ -19,7 +14,6 @@ import { CurrentUser } from '../../../../types/current-user.interface';
 })
 export class TopBarComponent implements OnInit {
   isLoggedIn$: Observable<boolean> = this.store.pipe(select(isLoggedInSelector));
-  isAnonymous$: Observable<boolean> = this.store.pipe(select(isAnonymousSelector));
   currentUser$: Observable<CurrentUser | undefined> = this.store.pipe(select(currentUserSelector));
   username$: Observable<string | undefined> = this.store.pipe(select(usernameSelector));
 

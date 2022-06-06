@@ -14,7 +14,7 @@
       <button mat-button class="logout" (click)="onLogout()">Logout</button>
     </div>
   </ng-container>
-  <ng-container *ngIf="isAnonymous$ | async">
+  <ng-container *ngIf="!(isLoggedIn$ | async)">
     <div class="right-part-public">
       <a mat-button class="sign-button text margin-right" [href]="registerPage">Sign Up</a>
       <a mat-button class="sign-button text" [href]="loginPage">Sign In</a>
