@@ -5,10 +5,10 @@ import { of } from 'rxjs';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 
-import { registerAction, registerSuccessAction, registerFailureAction } from '../actions/register.actions';
 import { AuthService } from '../../services/auth.service';
 import { CurrentUser } from '../../../shared/types/current-user.interface';
 import { PersistanceService } from '../../../shared/services/persistance.service';
+import { registerAction, registerSuccessAction, registerFailureAction } from '../actions/register.actions';
 
 @Injectable()
 export class RegisterEffect {
@@ -34,6 +34,7 @@ export class RegisterEffect {
       this.actions$.pipe(
         ofType(registerSuccessAction),
         tap(() => {
+          // TODO Find better solution
           console.log('Success'), this.router.navigateByUrl('/').then(() => window.location.reload());
         })
       ),
