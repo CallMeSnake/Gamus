@@ -35,8 +35,6 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
-    console.log('submit', this.form.value, this.form.valid);
-
     this.store.dispatch(registerAction({ request: this.form.value }));
   }
 }

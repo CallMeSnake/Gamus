@@ -42,4 +42,4 @@ Shut it down manually with `Ctrl-C`.
 
 To access the database, go to the website and log in. Here is all the necessary information:
 
-`auth-module-back\app\config\db.config.js`
+`app\config\db.config.js`

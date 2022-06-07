@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 
 import { AuthService } from '../../services/auth.service';
-import { loginAction, loginFailureAction, loginSuccessAction, logoutAction } from '../actions/login-actions';
 import { CurrentUser } from '../../../shared/types/current-user.interface';
 import { PersistanceService } from '../../../shared/services/persistance.service';
+import { loginAction, loginFailureAction, loginSuccessAction, logoutAction } from '../actions/login-actions';
 
 @Injectable()
 export class LoginEffect {
@@ -45,6 +45,7 @@ export class LoginEffect {
       this.actions$.pipe(
         ofType(loginSuccessAction),
         tap(() => {
+          // TODO Find better solution
           console.log('Success'), this.router.navigateByUrl('/').then(() => window.location.reload());
         })
       ),

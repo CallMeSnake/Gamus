@@ -1,15 +1,22 @@
 const express = require('express');
-const cors = require('cors');
+const path = require('path');
 
-var bodyParser = require('body-parser');
 const app = express();
+const root = __dirname + '/dist/gamus';
+
+app.use(express.static(root));
+// If route does not contain '/api' (used for CRUD operations) it should return index page
+app.use(/\/((?!api).)*/, (_, res) => res.sendFile('index.html', { root }));
+
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const jsonParser = express.json();
 
 app.use(jsonParser);
 
 var corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: ['http://localhost:4200', 'https://gamus-project.herokuapp.com'],
 };
 
 app.use(cors(corsOptions));
@@ -24,10 +31,6 @@ const db = require('./app/models');
 const Role = db.role;
 
 db.sequelize.sync();
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Gamus application.' });
-});
 
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
